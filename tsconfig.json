@@ -1,11 +1,20 @@
 {
     "compilerOptions": {
+        //onde serão armazenados os arquivos convertidos para js
         "outDir": "dist/js",
+        //para qual versão do ECMS que será convertido
         "target": "ES6",
+        //impede a conversão em caso de ts com erro
         "noEmitOnError": true,
+        //Não deixa passar nada com tipagem implicita any
         "noImplicitAny": true,
+        //Removendo comentários dos js gerados pelo tsc
         "removeComments": true,
+        //Obriga o tratamento de valores nulos
         "strictNullChecks": true
     },
-    "include": ["app/**/*"]
+    //informa onde estão os arquivos ts que serão convertidos para js
+    "include": [
+        "app/**/*"
+    ]
 }
