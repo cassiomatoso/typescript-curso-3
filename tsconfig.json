@@ -11,7 +11,9 @@
         //Removendo comentários dos js gerados pelo tsc
         "removeComments": true,
         //Obriga o tratamento de valores nulos
-        "strictNullChecks": true
+        "strictNullChecks": true,
+        //Possibilita o uso do Decorator
+        "experimentalDecorators": true
     },
     //informa onde estão os arquivos ts que serão convertidos para js
     "include": [
