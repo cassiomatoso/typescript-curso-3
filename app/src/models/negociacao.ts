@@ -1,5 +1,6 @@
 export class Negociacao {
     constructor(
+        //publico mas somente para leitura
         private _data: Date, 
         public readonly quantidade: number, 
         public readonly valor: number
@@ -14,6 +15,7 @@ export class Negociacao {
         return data;
     }
 
+    //retorna uma instância dela mesma convertida - todo método static posso chamar diretamente na classe
     public static criaDe(dataString: string, quantidadeString: string, valorString: string): Negociacao {
         const exp = /-/g;
         const date = new Date(dataString.replace(exp, ','));
