@@ -1,5 +1,6 @@
 import { logarTempoDeExecucao } from "../decorators/logar-tempo-de-execucao.js";
 
+//Evita instâncias diretas de View
 export abstract class View<T> {
 
     protected elemento: HTMLElement;
@@ -27,5 +28,6 @@ export abstract class View<T> {
         this.elemento.innerHTML = template;
     }
 
+    //Obriga as classes filhas a implementarem o método template e evita erro em run-time
     protected abstract template(model: T): string;
 }
